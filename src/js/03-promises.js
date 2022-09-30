@@ -24,7 +24,7 @@ function onBtnPromise(e) {
   e.preventDefault();
   let firstDelay = Number(delayEl.value)
   let delayStep = Number(stepEl.value);
-  for (i = 0; i < amountEl.value; i += 1) {
+  for (let i = 0; i < amountEl.value; i += 1) {
     createPromise(1 + i, firstDelay + i * delayStep)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
