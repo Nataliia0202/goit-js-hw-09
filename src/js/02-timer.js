@@ -56,9 +56,11 @@ btnStartEl.addEventListener('click', onBtnStartEl);
 function onBtnStartEl() {
     let timerId = setInterval(() => {
         let countDown = new Date(textEl.value) - new Date();
+        // console.log(countDown);
         btnStartEl.disabled = true;
         if (countDown >= 0) {
             let timeObject = convertMs(countDown);
+            // console.log(timeObject);
             days.textContent = addLeadingZero(timeObject.days);
             hours.textContent = addLeadingZero(timeObject.hours);
             minutes.textContent = addLeadingZero(timeObject.minutes);
